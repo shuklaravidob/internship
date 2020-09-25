@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>User details</h1>
+<div>
+<div mat-dialog-content>
+  <p>User Details</p>
+  <div>
+      First Name : {{data.firstName}}<br/>
+      Last Name : {{data.lastName}}<br/>
+      Mobile : {{data.mobile}}<br/>
+      Location : {{data.location}}
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+</div>

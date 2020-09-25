@@ -1,0 +1,32 @@
+<div style="margin-left: 650px;">
+    <h1>Create User</h1>
+   <div>
+       
+   <form [formGroup]="userForm">
+   <div>
+     <p>Create Users</p>
+     <mat-form-field>
+       <mat-label>First Name</mat-label>
+       <input matInput [(ngModel)]="data.firstName" formControlName="firstName">
+     </mat-form-field><br/>
+     <mat-form-field>
+       <mat-label>Last Name</mat-label>
+       <input matInput [(ngModel)]="data.lastName" formControlName="lastName">
+     </mat-form-field><br/>
+     <mat-form-field>
+       <mat-label>Moile</mat-label>
+       <input matInput [(ngModel)]="data.mobile" formControlName="mobile">
+     </mat-form-field><br/>
+     <mat-form-field>
+       <mat-label>Location</mat-label>
+       <mat-select [(ngModel)]="data.location" formControlName="location">
+          <mat-option *ngFor="let item of locations" [value]="item">{{item}}</mat-option>
+       </mat-select>
+     </mat-form-field>
+   </div>
+   <div>
+     <button mat-button (click)="createUser(data)" cdkFocusInitial>Next</button>
+   </div>
+   </form>
+   </div>
+</div>
